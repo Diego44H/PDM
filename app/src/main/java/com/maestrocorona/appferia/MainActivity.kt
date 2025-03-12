@@ -30,7 +30,6 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MainScreen(onNavigateToSecondActivity = {
-                // Iniciamos la segunda actividad cuando se presione el botón
                 startActivity(Intent(this, Activity2::class.java))
             })
         }
@@ -39,7 +38,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(onNavigateToSecondActivity: () -> Unit) {
-    // Pantalla principal que contiene todos los elementos
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
@@ -53,7 +51,6 @@ fun MainScreen(onNavigateToSecondActivity: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(16.dp),
 
         ) {
-            // Lista de negocios con sus imágenes
             BusinessItem("Negocios de la Nave 1")
             BusinessItem("Negocios de la Nave 2")
             BusinessItem("Negocios de la Nave 3")
