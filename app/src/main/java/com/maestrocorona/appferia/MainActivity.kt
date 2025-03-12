@@ -18,7 +18,10 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.maestrocorona.appferia.ui.theme.AppFeriaTheme
+import com.maestrocorona.appferia.ui.theme.Purple40
 import com.maestrocorona.appferia.ui.theme.Purple80
+import com.maestrocorona.appferia.ui.theme.PurpleGrey40
+import com.maestrocorona.appferia.ui.theme.PurpleGrey80
 
 
 class MainActivity : ComponentActivity() {
@@ -54,7 +57,7 @@ fun MainScreen(onNavigateToSecondActivity: () -> Unit) {
             BusinessItem("Negocios de la Nave 1")
             BusinessItem("Negocios de la Nave 2")
             BusinessItem("Negocios de la Nave 3")
-            BusinessItem("Negocios de la Nave 4")
+            BusinessItem("Atracciones y conciertos")
 
 
             // Botón para navegar a la segunda actividad
@@ -96,7 +99,8 @@ fun BusinessItem(text: String) {
                 text = text,
                 style = TextStyle(
                     fontFamily = FontFamily.SansSerif,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    color = Purple40
                 ),
                 modifier = Modifier.padding(8.dp)
             )
